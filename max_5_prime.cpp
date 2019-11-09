@@ -24,8 +24,8 @@ void find(int ceng)
 bool judge(int m)
 {
 	for(int i=2;i<=sqrt(m);i++)
-		if(m%i==0) return true;
-	return false;
+		if(m%i==0) return false;
+	return true;
 }
 int main()
 {
@@ -35,7 +35,8 @@ int main()
 		if(a[i]&&judge(i))
 		{
 			printf("%d",i);
-			break;
+			return 0;
 		}
+	printf("ERROR");
 	return 0;
 }
